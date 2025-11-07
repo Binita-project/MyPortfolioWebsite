@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binita - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(154, 235, 208);
+            color: black;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(78, 178, 145);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(147, 203, 253);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: blueviolet;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: rgb(11, 106, 106);
+            color: white;
+            border: 3px solid white;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 200px;
+            height: 200px;
+
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+
+
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        .text-gray {
+            color: grey;
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+
+
+
+        #about {
+            background-color: rgb(182, 216, 203);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2em;
+            color: rgb(102, 30, 169);
+            margin-bottom: 30px;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .about-box {
+            background-color: rgb(78, 178, 145);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: left;
+        }
+
+        .about-box h3 {
+            color: whitesmoke;
+            margin-bottom: 10px;
+        }
+
+        .about-box p,
+        .about-box li {
+            color: black;
+            line-height: 1.6;
+        }
+
+        .about-box ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+
+
+
+
+
+
+
+        #skills {
+            background-color: rgb(182, 216, 203);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: rgb(102, 30, 169);
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .skills-box {
+            background-color: rgb(78, 178, 145);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: left;
+        }
+
+        .skills-box h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .skills-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-box li {
+            padding: 6px 0;
+            font-size: 1em;
+            color: black;
+        }
+
+
+
+
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: black;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: black;
+            margin: 0 175px;
+        }
+
+        .image-top {
+            width: 33px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 80px;
+            width: 150px;
+            color: rgb(102, 30, 169);
+            font-weight: bold;
+
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 12px;
+        }
+
+        #suvidha {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    border-top: 4px solid #007bff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#suvidha h2 {
+    color: #007bff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#suvidha p {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+        footer {
+            background-color: rgb(11, 106, 106);
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: rgb(83, 176, 145);
+            padding: 12px 0;
+
+        }
+
+        footer .footer-second {
+
+            color: #00ffff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* 🌍 Responsive Design for Mobile and Tablet */
+@media (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .firstSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .firstSection > div {
+    width: 80%;
+  }
+
+  .leftSection {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .rightSection img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #about .about-container,
+  #skills .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-box,
+  .skills-box {
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .secondSection {
+    height: auto;
+    text-align: center;
+  }
+
+  .secondSection .box {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .secondSection .vertical {
+    width: 2px;
+    height: 120px;
+    margin: 40px 0;
+  }
+
+  .vertical-title,
+  .vertical-desc {
+    width: 100%;
+    left: 0;
+    top: 10px;
+    font-size: 0.9rem;
+  }
+
+  #suvidha {
+    margin: 20px;
+    padding: 30px 10px;
+  }
+
+  footer .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  footer .footer-second a {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li {
+    margin: 8px;
+  }
+
+  .leftSection {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  #about h2, #skills h2, #suvidha h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-box, .skills-box {
+    width: 90%;
+  }
+
+  #suvidha p {
+    font-size: 0.95rem;
+  }
+
+  footer .footer-rights {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+    </style>
+</head>
+
+<header>
+    <nav>
+        <div class="left">Binita's Portfolio</div>
+        <div class="right"></div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Skills</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Achievements</a></li>
+            <li><a href="/">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="firstSection">
+        <div class="leftSection">
+            Hi, My name is <span class="purple">Binita</span>
+
+            <div>& I am a passionate</div>
+            <span id="element"></span>
+            <div class="button">
+                <button class="btn">Download Resume</button>
+                <button class="btn">Visit Github</button>
+            </div>
+
+        </div>
+        <div class="rightSection">
+            <img src="profile-photo.jpeg" alt="">
+        </div>
+    </section>
+    <hr>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about-container">
+
+            <div class="about-box">
+                <h3>🎓 Education</h3>
+                <p>Bachelor of Technology, Computer Science Engineering</p>
+                <p><strong>University:</strong> Techno Engineering College Banipur</p>
+                <p><strong>Year:</strong> 2022 - 2026</p>
+            </div>
+
+            <div class="about-box">
+                <h3>🌱 Interests</h3>
+                <ul>
+                    <li>Web Development & Design</li>
+                    <li>UI/UX Creativity</li>
+                    <li>Learning New Technologies</li>
+                    <li>Photography & Travelling</li>
+                </ul>
+            </div>
+
+            <div class="about-box">
+                <h3>🚀 Professional Goals</h3>
+                <p>
+                    My goal is to become a skilled front-end developer,
+                    building interactive, user-friendly web experiences
+                    and contributing to impactful projects that make a difference.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skills-box">
+                <h3>💻 Technical Skills</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>React.js</li>
+                    <li>Bootstrap, Tailwind CSS</li>
+                    <li>Python</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+
+            <div class="skills-box">
+                <h3>🤝 Soft Skills</h3>
+                <ul>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Creativity</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<hr>
+<section id="suvidha"
+            style="text-align: center; margin: 50px 0; padding: 20px; background-color: #f0f8ff; border-top: 3px solid #007BFF;">
+            <h2 style="color: #007BFF;">Suvidha Foundation</h2>
+            <p style="font-size: 18px; color: #333; max-width: 700px; margin: 10px auto;">
+                This portfolio was developed as part of the
+                <strong>Suvidha Foundation International Skill Development Internship.</strong>
+            </p>
+        </section>
+
+
+    <hr>
+    <section class="secondSection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Projects</h1>
+
+        <div class="box">
+            <div class="vertical">
+                <img class="image-top" src="developer.png" alt="">
+                <div class="vertical-title">
+                    To-do List App (June 2025 —July 2025 )
+                </div>
+                <div class="vertical-desc">
+                    Used a to-do list app to boost productivity and manage time effectively, making tasks easier to
+                    complete while
+                    reducing stress and maintaining a good work-life balance.
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="developer.png" alt="">
+                <div class="vertical-title">
+                    FixMyCity App (Aug 2025-Oct 2025)
+                </div>
+                <div class="vertical-desc">
+                    FixMyCity App - Crowdsourced
+                    Civic Issue Reporting and Resolution System
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="developer.png" alt="">
+                <div class="vertical-title">
+                    Personal Portfolio Website (Oct 2025-Nov 2025)
+                </div>
+                <div class="vertical-desc">
+                    A responsive personal portfolio showcasing my skills, projects, and contact details.
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <hr>
+    <section class="secondSection">
+        <span class="text-gray">Career milestones</span>
+        <h1>Achievements</h1>
+
+        <div class="box">
+            <div class="vertical">
+                <img class="image-top" src="coursera-logo.png" alt="">
+                <div class="vertical-title">
+                    Coursera (2023)
+                </div>
+                <div class="vertical-desc">
+                    1. Successfull Career Development
+                    2. A Life OF Happiness
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="Google-logo.png" alt="">
+                <div class="vertical-title">
+                    Google (2024)
+                </div>
+                <div class="vertical-desc">
+                    1. Develop GenAI App with Gemini and Streamlit Skill
+                    2. Prompt Design in Vertex AI Skill
+                </div>
+            </div>
+            <div class="vertical">
+                <img class="image-top" src="aws-logo.png" alt="">
+                <div class="vertical-title">
+                    AWS (2025)
+                </div>
+                <div class="vertical-desc">
+                    1. AWS Academy Cloud Foundations
+                    2. AWS Academy Machine Learning Foundations
+
+                </div>
+            </div>
+
+        </div>
+
+      
+        
+
+
+
+</main>
+<footer>
+    <div class="footer">
+        <div class="footer-first">
+            <h3>Binita's Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+
+            <p>contact me:
+                <a href="https://www.linkedin.com/in/binita-dutta-233318261" target="_blank"> LinkedIn </a> |
+                <a href="https://github.com/Binita-project" target="_blank"> GitHub </a> |
+                <a href="mailto:bd3100508@gmail.com">Email</a>
+            </p>
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="footer-rights">
+        Copyright &#169; binitasportfolio.com | All rights reserved
+    </div>
+</footer>
+
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<!-- Setup and start animation! -->
+<script>
+    var typed = new Typed('#element', {
+        strings: ['Web Designer', 'Front-End Designer ', 'Web Developer'],
+        typeSpeed: 50,
+    });
+</script>
+</body>
+
+</html>
